@@ -1,0 +1,82 @@
+* SPICE3 file created from xorvia5.ext - technology: scmos
+
+.option scale=0.12u
+
+M1000 Vdd S0 a_419_n126# w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1001 Gnd a_200_n100# a_188_n123# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1002 a_369_n86# D2 Vdd w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1003 Y a_238_n126# a_224_n123# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1004 Gnd D2 a_369_n123# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1005 a_200_n100# D1 a_277_n86# w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1006 Y a_238_n126# a_188_n86# w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1007 a_188_n86# a_200_n100# Vdd w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1008 a_369_n123# S0 a_218_n100# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1009 a_313_n123# D1 Gnd Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1010 a_218_n100# a_419_n126# a_369_n86# w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1011 a_188_n123# S1 Y Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1012 Y a_218_n100# a_188_n86# w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1013 Gnd S0 a_419_n126# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1014 a_200_n100# a_327_n126# a_313_n123# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1015 a_218_n100# D0 a_369_n86# w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1016 Gnd S1 a_238_n126# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1017 Gnd D3 a_277_n123# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1018 a_277_n86# S0 Vdd w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1019 a_277_n123# S0 a_200_n100# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1020 Vdd S0 a_327_n126# w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1021 a_277_n86# D3 Vdd w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1022 a_405_n123# D0 Gnd Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1023 a_188_n86# S1 Vdd w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1024 Gnd S0 a_327_n126# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1025 a_369_n86# S0 Vdd w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1026 a_224_n123# a_218_n100# Gnd Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1027 Vdd S1 a_238_n126# w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1028 a_200_n100# a_327_n126# a_277_n86# w_175_n92# pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1029 a_218_n100# a_419_n126# a_405_n123# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+
+
+.include tsmc_cmos025
+
+Vs Vdd Gnd 2.5V
+
+Vin1 S0 Gnd PULSE(0, 2.5, 200p, 400p, 400p, 800p, 1600p)
+Vin2 D0 Gnd PULSE(0, 0, 200p, 400p, 400p, 800p, 1600p)
+Vin3 D1 Gnd PULSE(0, 2.5, 200p, 400p, 400p, 800p, 1600p)
+
+Vin4 S1 Gnd PULSE(0, 2.5, 200p, 400p, 400p, 800p, 1600p)
+Vin5 D2 Gnd PULSE(0, 0, 200p, 400p, 400p, 800p, 1600p)
+Vin6 D3 Gnd PULSE(0, 2.5, 200p, 400p, 400p, 800p, 1600p)
+
+
+
+.TRAN 1p 1600p
+.OPTIONS

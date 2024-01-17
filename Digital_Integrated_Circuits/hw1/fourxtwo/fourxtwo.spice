@@ -1,0 +1,16 @@
+* SPICE3 file created from fourxtwo.ext - technology: scmos
+
+.option scale=0.12u
+
+M1000 out in Vdd Vdd PMOS w=4 l=2
++  ad=24p pd=20u as=20p ps=18u
+M1001 out in Gnd Gnd NMOS w=4 l=2
++  ad=24p pd=20u as=20p ps=18u
+
+.include tsmc_cmos025
+
+Vs Vdd Gnd 2.5V
+Vp in Gnd PULSE(0 2.5 2n 0.1n 0.1n 4n 10n)
+
+.TRAN 1n 60n
+.OPTIONS
